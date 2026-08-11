@@ -1,0 +1,113 @@
+{
+  "name": "MealEntry",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "meal_slot": {
+      "type": "string",
+      "enum": [
+        "breakfast",
+        "lunch",
+        "dinner",
+        "snack1",
+        "snack2",
+        "sweet_treat"
+      ]
+    },
+    "food_name": {
+      "type": "string"
+    },
+    "serving_amount": {
+      "type": "number"
+    },
+    "serving_unit": {
+      "type": "string"
+    },
+    "base_calories": {
+      "type": "number"
+    },
+    "base_protein": {
+      "type": "number"
+    },
+    "base_carbs": {
+      "type": "number"
+    },
+    "base_fats": {
+      "type": "number"
+    },
+    "multiplier": {
+      "type": "number",
+      "default": 1
+    },
+    "calories": {
+      "type": "number"
+    },
+    "protein": {
+      "type": "number"
+    },
+    "carbs": {
+      "type": "number"
+    },
+    "fats": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "date",
+    "meal_slot",
+    "food_name"
+  ],
+  "rls": {
+    "create": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "read": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "delete": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}

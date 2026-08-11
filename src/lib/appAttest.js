@@ -1,0 +1,4 @@
+// Base64-encoded RSA public key for helper attestation verification.
+// Strip any spaces before use.
+export const APP_ATTEST_PUBLIC_KEY =
+  "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2VfGSzncSNdumvwoTRXg5pFE1NeQJBvwm6IVwfk7CVphpIH2IYRnXFWWTNoz3lKhRhQeBitLGee7xxmX+WwIL4i0s56zOuI0eC68I/AcTrVTgH/ZxBCj6Y2rufdCdcH1o68N4MV/RSqOFno4jMZQKCKO5pvQNiTIQj3J8LWvrQijYwLgozgQSK++8TXcmeAvIfvDe/mDiA273jJ4S9nDXV35Uwi6EZi/8XyqXEjM/VJghMlzVABxCFwWNUXrUagd2sxio0SswF+s7K3HS/XoXi8Vt4KfDYJe/Mt6R6Vu68hz7y56bc5ntdSeFjMFAGYhJO4x5H23nhqRLM5f3JjVaQIDAQAB";
