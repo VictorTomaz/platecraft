@@ -73,7 +73,7 @@ jobs:
           UUID=$(security cms -D -i profile.mobileprovision | plutil -extract UUID raw -)
           NAME=$(security cms -D -i profile.mobileprovision | plutil -extract Name raw -)
           TEAM_ID=$(security cms -D -i profile.mobileprovision | plutil -extract TeamIdentifier.0 raw -)
-          APP_ID=$(security cms -D -i profile.mobileprovision | plutil -extract application-identifier raw -)
+          APP_ID=$(security cms -D -i profile.mobileprovision | plutil -extract Entitlements.application-identifier raw -)
 
           if [ "$TEAM_ID" != "BKXSXM4KM4" ]; then
             echo "Invalid TeamIdentifier: $TEAM_ID"
